@@ -3,21 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h6{
+           font-size: 15px;
+        }
+
+        .h2-text{
+            color: red
+        }
+
+        .h6-text{
+            color: yellow
+        }
+
+        #h1-text{
+            font-size: 50px;
+            color: purple
+        }
+
+        div.python > a{
+            color: green
+        }
+
+        ul li {
+            color: green
+        }
+
+        ul > li:nth-child(2){
+            color: brown
+        }
+
+        input[type="text"]{
+            background-color: blue
+        }
+
+        input[type="text"]:hover{
+            background-color: green
+        }
+
+        a:hover{
+            color: red
+        }
+
+        li::marker{
+            color: red
+        }
+    </style>
 </head>
 <body>
-<div id="header">Заголовок страницы</div>
-    <h1>H1 text</h1>
-    <h2>H2 text</h2>
+<div id="header" class="javascript" >Заголовок страницы
+    <h1 id="h1-text">H1 text</h1>
+    <h1>H1 text 2</h1>
+    <h2 class="h2-text">H2 text</h2>
     <h3>H3 text</h3>
     <h4>H4 text</h4>
     <h5>H5 text</h5>
-    <h6>H6 text</h6>
+    <h6 class="h2-text h6-text">H6 text</h6>
     <p class="text bold">Тестовый текст <span style="color: red;">Красный текст</span> для проверки отображения параграфа</p>
-    <a href="https://www.example.com" target="_blank">Перейти на сайт</a>
+    <a href="https://playwhright.dev/javascript/" target="_blank">Javascript</a>
     <img src="photo.jpg" alt="Фото с пляжа">
     <ul>
         <li>Пункт 1</li>
         <li>Пункт 2</li>
+        <li>Пункт 3</li>
     </ul>
     <ol>
         <li>Первый пункт</li>
@@ -56,6 +104,22 @@
         </tr>
         </tbody>
     </table>
+    <div class="nth">
+        <p>1</p>
+        <p>2</p>
+        <h6>3</h6>
+        <h5>4</h5>
+        <p>5</p>
+    </div>
+</div>
+<div class="python" >
+    <h2 class="h2-text">H2 text</h2>
+    <a href="https://playwhright.dev/python/" target="_blank">Python</a>
+    <ul>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+        <li>Пункт 3</li>
+    </ul>
 </div>
 </body>
 </html>

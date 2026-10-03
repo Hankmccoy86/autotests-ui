@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright, expect
 
 # Запуск Playwright в синхронном режиме
-with (sync_playwright() as playwright):
+with sync_playwright() as playwright:
     # Открываем браузер Chromium (не в headless режиме, чтобы видеть действия)
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
@@ -15,7 +15,8 @@ with (sync_playwright() as playwright):
     email_input.fill("user.name@gmail.com")
 
     # Находим поле "Password" и заполняем его
-    password_input = page.locator('//div[@data-testid="login-form-password-input"]//div//input')
+    password_input = page.get_by_test_id('login-form-password-input').locator('input')
+    #.locator('//div[@data-testid="login-form-password-input"]//div//input')
     password_input.fill("password")
 
     # Находим кнопку "Login" и кликаем на нее
